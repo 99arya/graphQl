@@ -26,7 +26,6 @@ module.exports = {
       event: fetchedEvent
     });
     const result = await booking.save();
-    console.log("B", result);
     return transformBooking(result);
   },
   cancelBooking: async (args, req) => {

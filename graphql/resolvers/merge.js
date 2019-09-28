@@ -28,7 +28,7 @@ const events = async eventIds => {
   const user = async userId => {
     try {
       const user = await User.findById(userId);
-      console.log(user)
+      // console.log(user)
       return {
         ...user._doc,
         _id: user.id,

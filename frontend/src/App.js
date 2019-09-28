@@ -15,7 +15,7 @@ class App extends React.Component {
   };
 
   login = (token, userId, tokenExpiration) => {
-    this.setState({ token, userId });
+    this.setState({ token:token, userId:userId });
   };
 
   logout = () => {
@@ -23,13 +23,12 @@ class App extends React.Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <BrowserRouter>
         <React.Fragment>
           <AuthContext.Provider
             value={{
-              token: this.state.userId,
+              token: this.state.token,
               userId: this.state.userId,
               login: this.login,
               logout: this.logout
